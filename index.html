@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>待完成-任务计划表</title>
+    <!--移动端强制全视图 禁止页面缩放-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <!--移动端强制全视图 禁止页面缩放-->
+<link href="css/global.css" rel="stylesheet" type="text/css">
+</head>
+
+<body><div id="viewlayer">
+	<div class="body" id="header"><div id="add"></div><div id="title"><!--<marquee>今天的任务，你还有4件事情，保持好的生活节奏~如果电脑端没有触摸屏，也没有滚轮，请使用Page Up/Down键翻动列表</marquee>--></div><div id="right"></div></div>
+	<div class="body" id="schedule">
+		<?php
+			$TTDB="DRIVER=Microsoft Access Driver (*.mdb);DBQ=".realpath("C:/DB_HyperSchedule/DB_TimeTable.mdb");
+			$TTCON=odbc_connect($TTDB,"","",SQL_CUR_USE_ODBC );
+			$TTQuery=odbc_do($TTCON,"SELECT * FROM [1992599855] WHERE Date=#1/31/2018#;");
+
+			for($j=1;odbc_fetch_into($Kuery,$outArray,$j);$j++)
+			{echo iconv('gb2312', 'utf-8', $outArray[2]);}
+
+
+		?>
+  	  <div class="finished"><span class="timetable">上课前</span>去上课时带着数学作业</div>
+	  <div class="finished"><span class="timetable">第1、2节课</span>高等数学</div>
+	  <!--当显示"课间"或者相对模糊的时间，可以在数据库里用绝对的时间提醒，用模糊的时间显示-->
+	  <div class="finished"><span class="timetable">第3、4节课</span>大学英语</div>
+	  <div class="finished"><span class="timetable">下课以后</span>打印实验报告
+	  </div>
+	  <div class="finished"><span class="timetable">14:00</span>记得去图书馆学习</div>
+	  <div class="finished"><span class="timetable">晚上6:00</span>晚自习</div>
+	  <div class="schedule" id="current">
+	  	<div id="currtitle">晚自习后图书馆学习</div>
+	  	<div id="moreinfo">晚自习以后，小明辅导我计算机</div>
+	  </div>
+	  <div class="next"><span class="timetable">回宿舍时</span>给舍友捎饭</div>
+	  <div class="next"><span class="timetable">回宿舍时</span>买苹果、香蕉</div>
+	  <div class="next"><span class="timetable"></span>把班级纪律记录表发给老师</div>
+	  <div class="next"><span class="timetable">回宿舍后</span>洗澡</div>
+	  <div class="next"><span class="timetable">21:00</span>洗衣服</div>
+	  <div class="next"><span class="timetable">21:10</span>练习打字</div>
+	  <!--当显示"下课之后"或者相对模糊的时间，可以在数据库里用绝对的时间提醒，用模糊的时间显示-->
+	  <div class="next"><span class="timetable">回到宿舍之后</span>洗衣服</div>
+	</div>
+	<div class="body" id="footer">
+		<div id="ft1">今天</div>
+		<div id="ft2">课程表</div>
+		<div id="ft3">烂笔头</div>
+		<div id="ft4">我</div>
+	</div>
+</div></body>
+</html>

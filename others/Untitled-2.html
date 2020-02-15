@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<head>
+<style>
+@font-face {
+	font-family: Liu;
+	src:url(../fonts/ZUXINGHW-min.ttf) format('truetype');
+}
+	*{font-family: Liu;}
+</style>
+</head>
+
+<body>
+<p>I Don't Think This is A Good Idea...1234567890</p>
+<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ()</p>
+<input type="button" id="btn" value="按钮"/>
+<select name="select" id="select">
+    <option value="1">aa</option>
+    <option value="a">bb</option>
+    <option value="c">cc</option>
+</select>
+
+<br/>
+<h2>/doge 我怀疑你脑子里有……</h2>
+<h2>/doge I think sth in your head...</h2>
+</body>
+
+<script type="text/javascript">
+//点击按钮，让第二项选中
+    document.getElementById('btn').onclick=function(){
+        document.getElementById('select').value="a";
+    }    
+</script>
+</html>

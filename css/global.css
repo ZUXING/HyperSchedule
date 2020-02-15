@@ -1,0 +1,99 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'ZUXINGHW';
+	src: url('../fonts/zuxinghw-min.woff2') format('woff2'),
+         url('../fonts/zuxinghw-min.woff') format('woff'),
+		 url('../fonts/zuxinghw-min.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+	/*background-image:linear-gradient(#FDFFDF,#FEFEFE);
+	/*background-repeat: repeat-x;
+	background-size: 100% 100%;*/
+	margin: 0;
+	/*font-family:Helvetica;*/
+	font-family: 'ZUXINGHW';
+}
+/*div{outline: 1px solid #000;}*/
+#viewlayer{
+	/*background-image: url(../images/bgmain.png);*/
+	width: 100%;
+	/*height:noCSS3.js*/
+	background-size:contain;
+	margin: 0 auto;
+}
+.body{width: 100%;/*background-image: url(../images/bg.png);*/}
+
+#header{
+	height:40px;
+	background:linear-gradient(#FFF,#31ff9c);
+	/*border-bottom: 2px solid #00d26d;*/
+}
+#header>div{float: left;}
+#header #add{
+	width: 40px;
+	height: 40px;
+	background-image: url(../images/add.png);
+	background-size: cover;
+}
+#header #title{
+	/*height:noCSS3.js*/
+	width: 200px;
+	margin: 0;
+	height: 40px;
+}
+#header #right{
+	width: 40px;
+	height: 40px;
+	background-image: url(../images/add.png);
+	background-size: cover;
+}
+
+#schedule{
+	/*width:noCSS3.js*/
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#schedule .finished{
+	padding: 0 10px;
+	line-height:20px;
+	height: 20px;
+	margin: 10px 0;
+	color: #CCC;
+}
+#schedule #current{
+	text-align: center;
+	padding: 10px;
+}
+#schedule #current #currtitle{font-size: 32px;}
+#schedule .next{
+	padding: 0 10px;
+	line-height:32px;
+	height: 32px;
+	margin: 10px 0;
+	border-bottom: 0.5px solid #CCC;
+	/*border-image:url(../images/borderline.png) 2 0 round;*/
+}
+span.timetable{float: right;}
+
+
+#footer{
+	height: 47px;
+	border-top: 1px solid #CCC;
+	position: absolute;
+}
+#footer>div{
+	width: 80px;
+	height: 47px;
+	font-size: 12px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: bottom;	
+	background-size: 80px 36px;
+	background-repeat: no-repeat;
+}
+#footer #ft1{background-image: url(../images/ft1.png)}#footer #ft2{background-image: url(../images/ft2.png)}#footer #ft3{background-image: url(../images/ft3.png)}#footer #ft4{background-image: url(../images/ft4.png)}

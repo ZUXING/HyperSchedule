@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>好奇害死猫系列网页</title>
+</head>
+
+<body>
+	<details>
+		<summary>我也不知道我做的啥</summary>
+        <ul>
+        	<li>楼下高能</li>
+            <li>请注意</li>
+        </ul>
+    </details>
+    <progress id="progress1" value="0" max="100"></progress>
+    我是固定的<meter value="70" min="0" max="100" low="60" high="80" optimum="100"></meter>
+    我是固定的<meter id="mt2" value="0" min="0" max="100" low="60" high="80" optimum="100"></meter>
+    我可以变化<meter id="mt3" value="80" min="0" max="100" low="60" high="80" optimum="100"></meter>
+    我是固定的<meter value="79" min="0" max="100" low="60" high="80" optimum="100"></meter>
+    <button onClick="mt2up()" value="yeah">点一下有惊喜</button>
+    <ul contenteditable="true">
+    	<li>略略略</li>
+        <li>我右边这个框框可以删掉<textarea spellcheck="true">才怪</textarea></li>
+        <li>我不信</li>
+        <li>删了你后悔</li>
+    </ul>
+    <h1>注意！好奇害死猫！</h1>
+</body>
+<script>
+	var tival = setInterval("pplus()",30);
+	function pplus(){
+		var progress1 = document.getElementById("progress1");
+		if(progress1.value < 100)
+			progress1.value += 1;
+		else{
+			alert("duang 你死了！");
+			alert("略略略");
+			alert("看起来很烦是不是呀");
+			alert("再点一下就没了");
+			alert("哎我骗你的哈哈哈哈");
+			alert("瞬间没爱了是不是");
+			alert("是不是感觉很桑心很jiao望啊");
+			alert("真可惜你已经跳不出这个圈子了");
+			alert("我喜欢你");
+			alert("才怪");
+			alert("好了不闹了");
+			alert("让我们回到正题");
+			//window.clearInterval(tival);
+		}
+		
+	}
+	function mt2up(){
+		var mt2 = document.getElementById("mt2");
+			mt2.value += 2;
+	}
+	function mt2up(){
+		var mt2 = document.getElementById("mt2");
+			mt2.value += 2;
+	}
+</script>
+</html>
